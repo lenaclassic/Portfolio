@@ -119,10 +119,24 @@ header {
 }
 
 .home-content .btn-box {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 345px;
   height: 50px;
+}
+.home-content .btn-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; /*로고 크기만큼이라는 뜻*/
+  height: 100%;
+  background-color: #081b29;
+  animation: showRight 1s ease forwards;
+  /* 애니메이션 1.9초후에 시작 */
+  animation-delay: 1.9s;
+  z-index: 2;
 }
 .btn-box a {
   /* 글자를 가운데 정렬 */
