@@ -23,10 +23,23 @@ header {
   z-index: 100;
 }
 .logo {
+  position: relative;
   font-size: 25px;
   color: #ededed;
   text-decoration: none;
   font-weight: 600;
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; /*로고 크기만큼이라는 뜻*/
+  height: 100%;
+  background-color: #081b29;
+  animation: showRight 1s ease forwards;
+  /* 애니메이션 0.4초후에 시작 */
+  animation-delay: 0.4s;
 }
 .navbar a {
   font-size: 18px;
@@ -150,4 +163,24 @@ header {
 }
 .home-sci a:hover::before {
   width: 100%;
+}
+.home-imgHover {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  /* border: 2px solid red; */
+  transition: 3s;
+}
+.home-imgHover:hover {
+  background-color: #081b29;
+  opacity: 0.7; /*opacity:투명도 1이 투명도 100%*/
+}
+@keyframes showRight {
+  /* 최종 가로 길이를 0으로 만드는 애니메이션 */
+  100% {
+    width: 0;
+  }
 }
