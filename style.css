@@ -134,7 +134,7 @@ header {
   overflow: hidden;
   z-index: 1;
 }
-.hone-sci a::before {
+.home-sci a::before {
   content: "";
   position: absolute;
   top: 0;
